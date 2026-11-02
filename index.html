@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#210b2c">
+
 <title>Happy Birthday Tupu ❤️</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -36,48 +37,49 @@ overflow:hidden;
 -webkit-tap-highlight-color:transparent;
 }
 
-/* MOBILE RESPONSIVE PAGE FIX */
+/* MOBILE PAGE SYSTEM */
 
 .page{
 position:fixed;
-inset:0;
+top:0;
+right:0;
+bottom:0;
+left:0;
 width:100%;
+height:100%;
 height:100dvh;
+
 display:none;
-justify-content:center;
-align-items:flex-start;
-overflow-y:auto;
+flex-direction:column;
+justify-content:flex-start;
+align-items:stretch;
+
 overflow-x:hidden;
+overflow-y:auto;
 -webkit-overflow-scrolling:touch;
 overscroll-behavior-y:contain;
+scrollbar-width:none;
+
 padding:
-max(80px,calc(env(safe-area-inset-top) + 24px))
+max(76px, calc(env(safe-area-inset-top) + 58px))
 14px
-max(125px,calc(env(safe-area-inset-bottom) + 90px));
+max(118px, calc(env(safe-area-inset-bottom) + 100px));
+
 text-align:center;
 }
 
-.glass{
-flex:0 0 auto;
-margin:auto 0;
+.page::-webkit-scrollbar{
+display:none;
 }
 
 .page.active{
 display:flex;
-animation:pageOpen .8s ease;
 }
 
-@keyframes pageOpen{
-from{
-opacity:0;
-transform:scale(1.05);
-filter:blur(8px);
-}
-to{
-opacity:1;
-transform:scale(1);
-filter:blur(0);
-}
+.glass{
+width:min(100%, 850px);
+flex:0 0 auto;
+margin:0 auto;
 }
 
 /* BACKGROUNDS */
@@ -120,16 +122,20 @@ width:min(94vw,850px);
 padding:clamp(22px,5vw,50px);
 border-radius:30px;
 border:1px solid rgba(255,255,255,.20);
+
 background:
 linear-gradient(
 135deg,
 rgba(255,255,255,.17),
 rgba(255,255,255,.06)
 );
+
 backdrop-filter:blur(20px);
+
 box-shadow:
 0 25px 70px rgba(0,0,0,.35),
 inset 0 1px rgba(255,255,255,.30);
+
 position:relative;
 overflow:hidden;
 }
@@ -160,6 +166,7 @@ font-family:"Great Vibes",cursive;
 font-size:clamp(65px,19vw,125px);
 line-height:1;
 margin:12px 0;
+
 background:
 linear-gradient(
 90deg,
@@ -168,10 +175,12 @@ linear-gradient(
 #ffe59b,
 #fff
 );
+
 background-size:250%;
 -webkit-background-clip:text;
 color:transparent;
 animation:textGlow 4s linear infinite;
+
 filter:
 drop-shadow(0 5px 20px rgba(255,80,150,.45));
 }
@@ -336,8 +345,7 @@ transform:scale(1.13);
 
 .gallery{
 display:grid;
-grid-template-columns:
-repeat(2,minmax(0,1fr));
+grid-template-columns:repeat(2,minmax(0,1fr));
 gap:10px;
 margin:25px 0;
 }
@@ -369,6 +377,7 @@ left:0;
 right:0;
 padding:20px 5px 7px;
 font-size:10px;
+
 background:
 linear-gradient(
 transparent,
@@ -442,6 +451,7 @@ background:rgba(255,255,255,.12);
 border:1px solid rgba(255,255,255,.2);
 box-shadow:0 18px 50px rgba(0,0,0,.25);
 cursor:pointer;
+touch-action:manipulation;
 }
 
 .cake{
@@ -467,8 +477,7 @@ animation:flame .35s infinite alternate;
 @keyframes flame{
 to{
 transform:scale(1.2) rotate(7deg);
-filter:
-drop-shadow(0 0 12px #ffd54f);
+filter:drop-shadow(0 0 12px #ffd54f);
 }
 }
 
@@ -479,8 +488,7 @@ font-family:"Great Vibes",cursive;
 font-size:clamp(52px,14vw,95px);
 color:#ffe0ec;
 line-height:1.1;
-text-shadow:
-0 0 30px rgba(255,100,160,.5);
+text-shadow:0 0 30px rgba(255,100,160,.5);
 }
 
 .big-heart{
@@ -500,8 +508,7 @@ transform:scale(1.25);
 .nav{
 position:fixed;
 left:50%;
-bottom:
-max(10px,env(safe-area-inset-bottom));
+bottom:max(10px,env(safe-area-inset-bottom));
 transform:translateX(-50%);
 width:calc(100% - 22px);
 max-width:500px;
@@ -520,8 +527,7 @@ z-index:100;
 border:none;
 padding:11px 16px;
 border-radius:30px;
-background:
-linear-gradient(135deg,#fff,#ffd4e4);
+background:linear-gradient(135deg,#fff,#ffd4e4);
 color:#551734;
 font-size:12px;
 font-weight:800;
@@ -551,8 +557,7 @@ background:white;
 
 .music{
 position:fixed;
-top:
-max(12px,env(safe-area-inset-top));
+top:max(12px,env(safe-area-inset-top));
 right:12px;
 width:43px;
 height:43px;
@@ -577,15 +582,11 @@ animation:heartUp linear forwards;
 
 @keyframes heartUp{
 from{
-transform:
-translateY(0)
-rotate(0);
+transform:translateY(0) rotate(0);
 opacity:.8;
 }
 to{
-transform:
-translateY(-120vh)
-rotate(360deg);
+transform:translateY(-120vh) rotate(360deg);
 opacity:0;
 }
 }
@@ -627,16 +628,11 @@ animation:boom 1.2s ease-out forwards;
 
 @keyframes boom{
 0%{
-transform:
-translate(-50%,-50%)
-scale(.2);
+transform:translate(-50%,-50%) scale(.2);
 opacity:1;
 }
 100%{
-transform:
-translate(var(--x),var(--y))
-rotate(var(--r))
-scale(1.2);
+transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(1.2);
 opacity:0;
 }
 }
@@ -655,19 +651,17 @@ animation:confettiFall linear forwards;
 
 @keyframes confettiFall{
 to{
-transform:
-translateY(115vh)
-rotate(720deg);
+transform:translateY(115vh) rotate(720deg);
 }
 }
 
-/* SMALL MOBILE FIX */
+/* SMALL MOBILE */
 
 @media(max-height:680px){
 
 .page{
-padding-top:max(70px,calc(env(safe-area-inset-top) + 18px));
-padding-bottom:max(125px,calc(env(safe-area-inset-bottom) + 90px));
+padding-top:max(70px, calc(env(safe-area-inset-top) + 52px));
+padding-bottom:max(118px, calc(env(safe-area-inset-bottom) + 100px));
 }
 
 .glass{
@@ -694,13 +688,11 @@ font-size:58px;
 @media(min-width:700px){
 
 .gallery{
-grid-template-columns:
-repeat(3,1fr);
+grid-template-columns:repeat(3,1fr);
 }
 
 .wishes{
-grid-template-columns:
-repeat(3,1fr);
+grid-template-columns:repeat(3,1fr);
 }
 
 .date{
@@ -1072,13 +1064,8 @@ One last birthday surprise
 Make a wish, Tupu! ✨
 </strong>
 
-<p style="
-font-size:10px;
-opacity:.7;
-margin-top:7px">
-
+<p style="font-size:10px;opacity:.7;margin-top:7px">
 Tap the cake 💖
-
 </p>
 
 </div>
@@ -1129,9 +1116,7 @@ my Tupu. ❤️
 Just for Tupu 💕
 </h3>
 
-<p style="
-font-size:12px;
-line-height:1.8">
+<p style="font-size:12px;line-height:1.8">
 
 This little website was made
 with lots of love,
@@ -1193,8 +1178,7 @@ pages[currentPage]
 currentPage = index;
 
 if(currentPage < 0){
-currentPage =
-pages.length - 1;
+currentPage = pages.length - 1;
 }
 
 if(currentPage >= pages.length){
@@ -1203,6 +1187,10 @@ currentPage = 0;
 
 pages[currentPage]
 .classList.add("active");
+
+/* Reset every new page to the top */
+
+pages[currentPage].scrollTop = 0;
 
 dots.forEach((dot,i)=>{
 
@@ -1215,15 +1203,13 @@ i === currentPage
 
 if(currentPage === pages.length-1){
 
-nextBtn.innerHTML =
-"Restart ↻";
+nextBtn.innerHTML = "Restart ↻";
 
 createConfetti();
 
 }else{
 
-nextBtn.innerHTML =
-"Next →";
+nextBtn.innerHTML = "Next →";
 
 }
 
@@ -1246,8 +1232,7 @@ document.getElementById("music");
 
 if(music.paused){
 
-music.play()
-.catch(()=>{});
+music.play().catch(()=>{});
 
 }else{
 
@@ -1289,55 +1274,38 @@ for(let i=0;i<25;i++){
 const particle =
 document.createElement("span");
 
-particle.className =
-"particle";
+particle.className = "particle";
 
 particle.innerHTML =
 icons[
-Math.floor(
-Math.random()*icons.length
-)
+Math.floor(Math.random()*icons.length)
 ];
 
-particle.style.left =
-centerX+"px";
-
-particle.style.top =
-centerY+"px";
+particle.style.left = centerX+"px";
+particle.style.top = centerY+"px";
 
 const angle =
-Math.random()*
-Math.PI*2;
+Math.random()*Math.PI*2;
 
 const distance =
-70+
-Math.random()*170;
+70+Math.random()*170;
 
-particle.style
-.setProperty(
+particle.style.setProperty(
 "--x",
-Math.cos(angle)*
-distance+"px"
+Math.cos(angle)*distance+"px"
 );
 
-particle.style
-.setProperty(
+particle.style.setProperty(
 "--y",
-Math.sin(angle)*
-distance+"px"
+Math.sin(angle)*distance+"px"
 );
 
-particle.style
-.setProperty(
+particle.style.setProperty(
 "--r",
-(
-Math.random()*720-360
-)+"deg"
+(Math.random()*720-360)+"deg"
 );
 
-layer.appendChild(
-particle
-);
+layer.appendChild(particle);
 
 setTimeout(()=>{
 particle.remove();
@@ -1376,8 +1344,7 @@ function createHeart(){
 const heart =
 document.createElement("div");
 
-heart.className =
-"floating-heart";
+heart.className = "floating-heart";
 
 const hearts = [
 "❤️",
@@ -1388,28 +1355,19 @@ const hearts = [
 
 heart.innerHTML =
 hearts[
-Math.floor(
-Math.random()*hearts.length
-)
+Math.floor(Math.random()*hearts.length)
 ];
 
 heart.style.left =
 Math.random()*100+"vw";
 
 heart.style.fontSize =
-(
-12+
-Math.random()*18
-)+"px";
+(12+Math.random()*18)+"px";
 
 heart.style.animationDuration =
-(
-6+
-Math.random()*5
-)+"s";
+(6+Math.random()*5)+"s";
 
-document.body
-.appendChild(heart);
+document.body.appendChild(heart);
 
 setTimeout(()=>{
 heart.remove();
@@ -1417,10 +1375,7 @@ heart.remove();
 
 }
 
-setInterval(
-createHeart,
-900
-);
+setInterval(createHeart,900);
 
 /* SPARKLES */
 
@@ -1429,8 +1384,7 @@ for(let i=0;i<20;i++){
 const spark =
 document.createElement("div");
 
-spark.className =
-"spark";
+spark.className = "spark";
 
 spark.style.left =
 Math.random()*100+"vw";
@@ -1441,8 +1395,7 @@ Math.random()*100+"vh";
 spark.style.animationDelay =
 Math.random()*2+"s";
 
-document.body
-.appendChild(spark);
+document.body.appendChild(spark);
 
 }
 
@@ -1463,30 +1416,23 @@ for(let i=0;i<55;i++){
 const confetti =
 document.createElement("div");
 
-confetti.className =
-"confetti";
+confetti.className = "confetti";
 
 confetti.style.left =
 Math.random()*100+"vw";
 
 confetti.style.background =
 colors[
-Math.floor(
-Math.random()*colors.length
-)
+Math.floor(Math.random()*colors.length)
 ];
 
 confetti.style.animationDuration =
-(
-2.5+
-Math.random()*3
-)+"s";
+(2.5+Math.random()*3)+"s";
 
 confetti.style.animationDelay =
 Math.random()*.7+"s";
 
-document.body
-.appendChild(confetti);
+document.body.appendChild(confetti);
 
 setTimeout(()=>{
 confetti.remove();
@@ -1496,7 +1442,7 @@ confetti.remove();
 
 }
 
-/* SWIPE FOR MOBILE */
+/* MOBILE SWIPE */
 
 let touchStartX = 0;
 let touchEndX = 0;
@@ -1506,8 +1452,7 @@ document.addEventListener(
 function(event){
 
 touchStartX =
-event.changedTouches[0]
-.screenX;
+event.changedTouches[0].screenX;
 
 },
 {passive:true}
@@ -1518,8 +1463,7 @@ document.addEventListener(
 function(event){
 
 touchEndX =
-event.changedTouches[0]
-.screenX;
+event.changedTouches[0].screenX;
 
 let difference =
 touchStartX-touchEndX;
