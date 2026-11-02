@@ -4,904 +4,708 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#210b2c">
-
 <title>Happy Birthday Tupu ❤️</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 :root{
-    --pink:#ff4f91;
-    --light-pink:#ffb3d1;
-    --gold:#ffd166;
-    --purple:#8b5cf6;
-    --dark:#16091f;
+--pink:#ff4f91;
+--light-pink:#ffb3d1;
+--gold:#ffd166;
+--purple:#8b5cf6;
+--dark:#16091f;
 }
 
 html,body{
-    width:100%;
-    height:100%;
+width:100%;
+height:100%;
 }
 
 body{
-    font-family:"Poppins",sans-serif;
-    background:#16091f;
-    color:white;
-    overflow:hidden;
-    -webkit-tap-highlight-color:transparent;
+font-family:"Poppins",sans-serif;
+background:#16091f;
+color:white;
+overflow:hidden;
+-webkit-tap-highlight-color:transparent;
 }
 
-/* =========================
-   PAGES
-========================= */
+/* MOBILE RESPONSIVE PAGE FIX */
 
 .page{
-    position:fixed;
-    inset:0;
-    width:100%;
-    height:100dvh;
+position:fixed;
+inset:0;
+width:100%;
+height:100dvh;
+display:none;
+justify-content:center;
+align-items:flex-start;
+overflow-y:auto;
+overflow-x:hidden;
+-webkit-overflow-scrolling:touch;
+overscroll-behavior-y:contain;
+padding:
+max(80px,calc(env(safe-area-inset-top) + 24px))
+14px
+max(125px,calc(env(safe-area-inset-bottom) + 90px));
+text-align:center;
+}
 
-    display:none;
-    justify-content:center;
-    align-items:center;
-
-    overflow-y:auto;
-
-    padding:
-        max(65px,env(safe-area-inset-top))
-        14px
-        max(100px,env(safe-area-inset-bottom));
-
-    text-align:center;
+.glass{
+flex:0 0 auto;
+margin:auto 0;
 }
 
 .page.active{
-    display:flex;
-    animation:pageOpen .8s ease;
+display:flex;
+animation:pageOpen .8s ease;
 }
 
 @keyframes pageOpen{
-    from{
-        opacity:0;
-        transform:scale(1.05);
-        filter:blur(8px);
-    }
-    to{
-        opacity:1;
-        transform:scale(1);
-        filter:blur(0);
-    }
+from{
+opacity:0;
+transform:scale(1.05);
+filter:blur(8px);
+}
+to{
+opacity:1;
+transform:scale(1);
+filter:blur(0);
+}
 }
 
-/* backgrounds */
+/* BACKGROUNDS */
 
 .page1{
-    background:
-    radial-gradient(circle at 15% 15%,#ff4f9160,transparent 35%),
-    radial-gradient(circle at 90% 70%,#8b5cf660,transparent 35%),
-    linear-gradient(135deg,#17091f,#54143d,#25104d);
+background:
+radial-gradient(circle at 15% 15%,#ff4f9160,transparent 35%),
+radial-gradient(circle at 90% 70%,#8b5cf660,transparent 35%),
+linear-gradient(135deg,#17091f,#54143d,#25104d);
 }
 
 .page2{
-    background:
-    radial-gradient(circle at 20% 80%,#ff669960,transparent 35%),
-    linear-gradient(135deg,#120c35,#47277d,#722d69);
+background:
+radial-gradient(circle at 20% 80%,#ff669960,transparent 35%),
+linear-gradient(135deg,#120c35,#47277d,#722d69);
 }
 
 .page3{
-    background:
-    radial-gradient(circle at 80% 20%,#ffb3d155,transparent 30%),
-    linear-gradient(135deg,#280b22,#812b54,#341548);
+background:
+radial-gradient(circle at 80% 20%,#ffb3d155,transparent 30%),
+linear-gradient(135deg,#280b22,#812b54,#341548);
 }
 
 .page4{
-    background:
-    radial-gradient(circle at 20% 30%,#ffd16635,transparent 30%),
-    linear-gradient(135deg,#140c29,#5d234b,#28174f);
+background:
+radial-gradient(circle at 20% 30%,#ffd16635,transparent 30%),
+linear-gradient(135deg,#140c29,#5d234b,#28174f);
 }
 
 .page5{
-    background:
-    radial-gradient(circle at 50% 15%,#ff4f9155,transparent 35%),
-    linear-gradient(135deg,#180c20,#81214f,#401962);
+background:
+radial-gradient(circle at 50% 15%,#ff4f9155,transparent 35%),
+linear-gradient(135deg,#180c20,#81214f,#401962);
 }
 
-/* =========================
-   GLASS CARD
-========================= */
+/* GLASS CARD */
 
 .glass{
-    width:min(94vw,850px);
-
-    padding:clamp(22px,5vw,50px);
-
-    border-radius:30px;
-
-    border:1px solid rgba(255,255,255,.20);
-
-    background:
-    linear-gradient(
-        135deg,
-        rgba(255,255,255,.17),
-        rgba(255,255,255,.06)
-    );
-
-    backdrop-filter:blur(20px);
-
-    box-shadow:
-    0 25px 70px rgba(0,0,0,.35),
-    inset 0 1px rgba(255,255,255,.30);
-
-    position:relative;
-    overflow:hidden;
+width:min(94vw,850px);
+padding:clamp(22px,5vw,50px);
+border-radius:30px;
+border:1px solid rgba(255,255,255,.20);
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,.17),
+rgba(255,255,255,.06)
+);
+backdrop-filter:blur(20px);
+box-shadow:
+0 25px 70px rgba(0,0,0,.35),
+inset 0 1px rgba(255,255,255,.30);
+position:relative;
+overflow:hidden;
 }
 
 .glass::before{
-    content:"";
-    position:absolute;
-
-    width:200px;
-    height:200px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.10);
-
-    right:-100px;
-    top:-100px;
-
-    filter:blur(10px);
+content:"";
+position:absolute;
+width:200px;
+height:200px;
+border-radius:50%;
+background:rgba(255,255,255,.10);
+right:-100px;
+top:-100px;
+filter:blur(10px);
 }
 
-/* =========================
-   TEXT
-========================= */
+/* TEXT */
 
 .small-title{
-    text-transform:uppercase;
-    letter-spacing:4px;
-    font-size:11px;
-    opacity:.8;
+text-transform:uppercase;
+letter-spacing:4px;
+font-size:11px;
+opacity:.8;
 }
 
 .tupu{
-    font-family:"Great Vibes",cursive;
-
-    font-size:clamp(65px,19vw,125px);
-
-    line-height:1;
-
-    margin:12px 0;
-
-    background:
-    linear-gradient(
-        90deg,
-        #fff,
-        #ffd4e5,
-        #ffe59b,
-        #fff
-    );
-
-    background-size:250%;
-
-    -webkit-background-clip:text;
-    color:transparent;
-
-    animation:textGlow 4s linear infinite;
-
-    filter:
-    drop-shadow(0 5px 20px rgba(255,80,150,.45));
+font-family:"Great Vibes",cursive;
+font-size:clamp(65px,19vw,125px);
+line-height:1;
+margin:12px 0;
+background:
+linear-gradient(
+90deg,
+#fff,
+#ffd4e5,
+#ffe59b,
+#fff
+);
+background-size:250%;
+-webkit-background-clip:text;
+color:transparent;
+animation:textGlow 4s linear infinite;
+filter:
+drop-shadow(0 5px 20px rgba(255,80,150,.45));
 }
 
 @keyframes textGlow{
-    to{
-        background-position:250%;
-    }
+to{
+background-position:250%;
+}
 }
 
 .birthday-title{
-    font-size:clamp(28px,8vw,55px);
-    font-weight:800;
+font-size:clamp(28px,8vw,55px);
+font-weight:800;
 }
 
 .subtitle{
-    font-size:clamp(14px,4vw,18px);
-    line-height:1.8;
-    margin-top:15px;
-    color:#fff3fa;
+font-size:clamp(14px,4vw,18px);
+line-height:1.8;
+margin-top:15px;
+color:#fff3fa;
 }
 
-/* =========================
-   TUPU BADGE
-========================= */
+/* TUPU BADGE */
 
 .tupu-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-
-    padding:8px 15px;
-
-    border-radius:30px;
-
-    border:1px solid rgba(255,255,255,.3);
-
-    background:rgba(255,255,255,.12);
-
-    margin-bottom:14px;
-
-    font-size:12px;
-    font-weight:700;
-
-    animation:badge 2s infinite;
+display:inline-flex;
+align-items:center;
+gap:7px;
+padding:8px 15px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.3);
+background:rgba(255,255,255,.12);
+margin-bottom:14px;
+font-size:12px;
+font-weight:700;
+animation:badge 2s infinite;
 }
 
 @keyframes badge{
-    50%{
-        transform:translateY(-5px);
-        box-shadow:0 10px 30px rgba(255,80,150,.4);
-    }
+50%{
+transform:translateY(-5px);
+box-shadow:0 10px 30px rgba(255,80,150,.4);
+}
 }
 
-/* =========================
-   HERO EMOJIS
-========================= */
+/* HERO EMOJIS */
 
 .hero-icons{
-    font-size:clamp(30px,9vw,55px);
-    margin:18px 0;
-
-    animation:heroFloat 2.3s ease-in-out infinite;
+font-size:clamp(30px,9vw,55px);
+margin:18px 0;
+animation:heroFloat 2.3s ease-in-out infinite;
 }
 
 @keyframes heroFloat{
-    50%{
-        transform:translateY(-10px) scale(1.04);
-    }
+50%{
+transform:translateY(-10px) scale(1.04);
+}
 }
 
-/* =========================
-   SURPRISE BUTTONS
-========================= */
+/* SURPRISE BUTTONS */
 
 .surprise-row{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-
-    gap:10px;
-
-    margin:24px auto;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+margin:24px auto;
 }
 
 .surprise{
-    width:72px;
-    min-height:78px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    border-radius:20px;
-
-    background:rgba(255,255,255,.12);
-
-    border:1px solid rgba(255,255,255,.2);
-
-    backdrop-filter:blur(12px);
-
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
-
-    cursor:pointer;
-
-    animation:giftFloat 2.5s ease-in-out infinite;
+width:72px;
+min-height:78px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:20px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.2);
+backdrop-filter:blur(12px);
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+cursor:pointer;
+animation:giftFloat 2.5s ease-in-out infinite;
 }
 
 .surprise:nth-child(2){
-    animation-delay:.3s;
+animation-delay:.3s;
 }
 
 .surprise:nth-child(3){
-    animation-delay:.6s;
+animation-delay:.6s;
 }
 
 .surprise:nth-child(4){
-    animation-delay:.9s;
+animation-delay:.9s;
 }
 
 @keyframes giftFloat{
-    50%{
-        transform:translateY(-7px) rotate(3deg);
-    }
+50%{
+transform:translateY(-7px) rotate(3deg);
+}
 }
 
 .surprise span{
-    display:block;
-    font-size:32px;
+display:block;
+font-size:32px;
 }
 
 .surprise small{
-    font-size:9px;
-    font-weight:700;
+font-size:9px;
+font-weight:700;
 }
 
-/* =========================
-   CALENDAR
-========================= */
+/* CALENDAR */
 
 .calendar{
-    width:100%;
-    max-width:570px;
-
-    margin:25px auto;
-
-    display:grid;
-    grid-template-columns:repeat(7,1fr);
-
-    gap:5px;
+width:100%;
+max-width:570px;
+margin:25px auto;
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:5px;
 }
 
 .day{
-    font-size:10px;
-    color:#ffd795;
-    font-weight:700;
-
-    padding:7px 1px;
+font-size:10px;
+color:#ffd795;
+font-weight:700;
+padding:7px 1px;
 }
 
 .date{
-    padding:9px 2px;
-
-    border-radius:12px;
-
-    background:rgba(255,255,255,.06);
-
-    font-size:12px;
+padding:9px 2px;
+border-radius:12px;
+background:rgba(255,255,255,.06);
+font-size:12px;
 }
 
 .special-date{
-    background:
-    linear-gradient(135deg,#ff4f91,#ff9a62);
-
-    font-weight:800;
-
-    position:relative;
-
-    animation:specialDate 1.4s infinite;
-
-    box-shadow:0 0 25px rgba(255,80,150,.5);
+background:
+linear-gradient(135deg,#ff4f91,#ff9a62);
+font-weight:800;
+position:relative;
+animation:specialDate 1.4s infinite;
+box-shadow:0 0 25px rgba(255,80,150,.5);
 }
 
 .special-date::after{
-    content:"❤️";
-
-    position:absolute;
-
-    font-size:14px;
-
-    right:-7px;
-    top:-10px;
+content:"❤️";
+position:absolute;
+font-size:14px;
+right:-7px;
+top:-10px;
 }
 
 @keyframes specialDate{
-    50%{
-        transform:scale(1.13);
-    }
+50%{
+transform:scale(1.13);
+}
 }
 
-/* =========================
-   GALLERY
-========================= */
+/* GALLERY */
 
 .gallery{
-    display:grid;
-
-    grid-template-columns:
-    repeat(2,minmax(0,1fr));
-
-    gap:10px;
-
-    margin:25px 0;
+display:grid;
+grid-template-columns:
+repeat(2,minmax(0,1fr));
+gap:10px;
+margin:25px 0;
 }
 
 .photo{
-    position:relative;
-
-    aspect-ratio:1/1;
-
-    overflow:hidden;
-
-    border-radius:18px;
-
-    border:2px solid rgba(255,255,255,.7);
-
-    box-shadow:0 12px 30px rgba(0,0,0,.25);
-
-    transition:.3s;
+position:relative;
+aspect-ratio:1/1;
+overflow:hidden;
+border-radius:18px;
+border:2px solid rgba(255,255,255,.7);
+box-shadow:0 12px 30px rgba(0,0,0,.25);
+transition:.3s;
 }
 
 .photo:active{
-    transform:scale(.96);
+transform:scale(.96);
 }
 
 .photo img{
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
 .photo span{
-    position:absolute;
-
-    bottom:0;
-    left:0;
-    right:0;
-
-    padding:20px 5px 7px;
-
-    font-size:10px;
-
-    background:
-    linear-gradient(
-        transparent,
-        rgba(0,0,0,.75)
-    );
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+padding:20px 5px 7px;
+font-size:10px;
+background:
+linear-gradient(
+transparent,
+rgba(0,0,0,.75)
+);
 }
 
-/* =========================
-   MESSAGE
-========================= */
+/* MESSAGE */
 
 .message{
-    font-size:13px;
-
-    line-height:1.9;
-
-    text-align:left;
-
-    color:#fff5fa;
+font-size:13px;
+line-height:1.9;
+text-align:left;
+color:#fff5fa;
 }
 
 .love-note{
-    margin-top:20px;
-
-    padding:17px;
-
-    border-radius:20px;
-
-    background:rgba(255,255,255,.1);
-
-    border:1px solid rgba(255,255,255,.15);
+margin-top:20px;
+padding:17px;
+border-radius:20px;
+background:rgba(255,255,255,.1);
+border:1px solid rgba(255,255,255,.15);
 }
 
 .love-note h3{
-    font-family:"Great Vibes",cursive;
-
-    font-size:36px;
-
-    color:#ffe3ee;
+font-family:"Great Vibes",cursive;
+font-size:36px;
+color:#ffe3ee;
 }
 
-/* =========================
-   WISH CARDS
-========================= */
+/* WISH CARDS */
 
 .wishes{
-    display:grid;
-
-    grid-template-columns:1fr;
-
-    gap:10px;
-
-    margin-top:20px;
+display:grid;
+grid-template-columns:1fr;
+gap:10px;
+margin-top:20px;
 }
 
 .wish{
-    padding:18px 12px;
-
-    border-radius:18px;
-
-    background:rgba(255,255,255,.09);
-
-    border:1px solid rgba(255,255,255,.14);
+padding:18px 12px;
+border-radius:18px;
+background:rgba(255,255,255,.09);
+border:1px solid rgba(255,255,255,.14);
 }
 
 .wish b{
-    display:block;
-
-    font-size:27px;
+display:block;
+font-size:27px;
 }
 
 .wish h3{
-    color:#ffe0a8;
-
-    font-size:14px;
-
-    margin:4px;
+color:#ffe0a8;
+font-size:14px;
+margin:4px;
 }
 
 .wish p{
-    font-size:11px;
-
-    opacity:.8;
+font-size:11px;
+opacity:.8;
 }
 
-/* =========================
-   CAKE
-========================= */
+/* CAKE */
 
 .cake-stage{
-    width:min(280px,85vw);
-
-    margin:20px auto;
-
-    padding:18px;
-
-    border-radius:28px;
-
-    background:rgba(255,255,255,.12);
-
-    border:1px solid rgba(255,255,255,.2);
-
-    box-shadow:0 18px 50px rgba(0,0,0,.25);
-
-    cursor:pointer;
+width:min(280px,85vw);
+margin:20px auto;
+padding:18px;
+border-radius:28px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.2);
+box-shadow:0 18px 50px rgba(0,0,0,.25);
+cursor:pointer;
 }
 
 .cake{
-    font-size:75px;
-
-    animation:cakeMove 1.7s ease-in-out infinite;
-
-    filter:drop-shadow(0 12px 15px rgba(0,0,0,.3));
+font-size:75px;
+animation:cakeMove 1.7s ease-in-out infinite;
+filter:drop-shadow(0 12px 15px rgba(0,0,0,.3));
 }
 
 @keyframes cakeMove{
-    50%{
-        transform:
-        translateY(-8px)
-        rotate(-2deg)
-        scale(1.04);
-    }
+50%{
+transform:
+translateY(-8px)
+rotate(-2deg)
+scale(1.04);
+}
 }
 
 .flame{
-    font-size:24px;
-
-    animation:flame .35s infinite alternate;
+font-size:24px;
+animation:flame .35s infinite alternate;
 }
 
 @keyframes flame{
-    to{
-        transform:scale(1.2) rotate(7deg);
-
-        filter:
-        drop-shadow(0 0 12px #ffd54f);
-    }
+to{
+transform:scale(1.2) rotate(7deg);
+filter:
+drop-shadow(0 0 12px #ffd54f);
+}
 }
 
-/* =========================
-   FINAL
-========================= */
+/* FINAL */
 
 .final-title{
-    font-family:"Great Vibes",cursive;
-
-    font-size:clamp(52px,14vw,95px);
-
-    color:#ffe0ec;
-
-    line-height:1.1;
-
-    text-shadow:
-    0 0 30px rgba(255,100,160,.5);
+font-family:"Great Vibes",cursive;
+font-size:clamp(52px,14vw,95px);
+color:#ffe0ec;
+line-height:1.1;
+text-shadow:
+0 0 30px rgba(255,100,160,.5);
 }
 
 .big-heart{
-    font-size:60px;
-
-    margin:20px;
-
-    animation:heartBeat 1s infinite;
+font-size:60px;
+margin:20px;
+animation:heartBeat 1s infinite;
 }
 
 @keyframes heartBeat{
-    50%{
-        transform:scale(1.25);
-    }
+50%{
+transform:scale(1.25);
+}
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+/* NAVIGATION */
 
 .nav{
-    position:fixed;
-
-    left:50%;
-    bottom:
-    max(10px,env(safe-area-inset-bottom));
-
-    transform:translateX(-50%);
-
-    width:calc(100% - 22px);
-    max-width:500px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:8px;
-
-    border-radius:50px;
-
-    background:rgba(15,7,25,.6);
-
-    backdrop-filter:blur(15px);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    z-index:100;
+position:fixed;
+left:50%;
+bottom:
+max(10px,env(safe-area-inset-bottom));
+transform:translateX(-50%);
+width:calc(100% - 22px);
+max-width:500px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:8px;
+border-radius:50px;
+background:rgba(15,7,25,.6);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.15);
+z-index:100;
 }
 
 .btn{
-    border:none;
-
-    padding:11px 16px;
-
-    border-radius:30px;
-
-    background:
-    linear-gradient(135deg,#fff,#ffd4e4);
-
-    color:#551734;
-
-    font-size:12px;
-
-    font-weight:800;
-
-    cursor:pointer;
+border:none;
+padding:11px 16px;
+border-radius:30px;
+background:
+linear-gradient(135deg,#fff,#ffd4e4);
+color:#551734;
+font-size:12px;
+font-weight:800;
+cursor:pointer;
 }
 
 .dots{
-    display:flex;
-    gap:5px;
+display:flex;
+gap:5px;
 }
 
 .dot{
-    width:7px;
-    height:7px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.3);
-
-    transition:.3s;
+width:7px;
+height:7px;
+border-radius:50%;
+background:rgba(255,255,255,.3);
+transition:.3s;
 }
 
 .dot.active{
-    width:20px;
-
-    border-radius:10px;
-
-    background:white;
+width:20px;
+border-radius:10px;
+background:white;
 }
 
-/* =========================
-   MUSIC
-========================= */
+/* MUSIC */
 
 .music{
-    position:fixed;
-
-    top:
-    max(12px,env(safe-area-inset-top));
-
-    right:12px;
-
-    width:43px;
-    height:43px;
-
-    border-radius:50%;
-
-    border:1px solid rgba(255,255,255,.2);
-
-    background:rgba(20,8,30,.5);
-
-    backdrop-filter:blur(15px);
-
-    color:white;
-
-    font-size:18px;
-
-    z-index:200;
+position:fixed;
+top:
+max(12px,env(safe-area-inset-top));
+right:12px;
+width:43px;
+height:43px;
+border-radius:50%;
+border:1px solid rgba(255,255,255,.2);
+background:rgba(20,8,30,.5);
+backdrop-filter:blur(15px);
+color:white;
+font-size:18px;
+z-index:200;
 }
 
-/* =========================
-   FLOATING HEARTS
-========================= */
+/* FLOATING HEARTS */
 
 .floating-heart{
-    position:fixed;
-
-    bottom:-50px;
-
-    pointer-events:none;
-
-    z-index:0;
-
-    animation:heartUp linear forwards;
+position:fixed;
+bottom:-50px;
+pointer-events:none;
+z-index:0;
+animation:heartUp linear forwards;
 }
 
 @keyframes heartUp{
-    from{
-        transform:
-        translateY(0)
-        rotate(0);
-
-        opacity:.8;
-    }
-
-    to{
-        transform:
-        translateY(-120vh)
-        rotate(360deg);
-
-        opacity:0;
-    }
+from{
+transform:
+translateY(0)
+rotate(0);
+opacity:.8;
+}
+to{
+transform:
+translateY(-120vh)
+rotate(360deg);
+opacity:0;
+}
 }
 
-/* =========================
-   SPARKLES
-========================= */
+/* SPARKLES */
 
 .spark{
-    position:fixed;
-
-    width:4px;
-    height:4px;
-
-    border-radius:50%;
-
-    background:white;
-
-    box-shadow:0 0 10px white;
-
-    pointer-events:none;
-
-    animation:spark 2s infinite;
+position:fixed;
+width:4px;
+height:4px;
+border-radius:50%;
+background:white;
+box-shadow:0 0 10px white;
+pointer-events:none;
+animation:spark 2s infinite;
 }
 
 @keyframes spark{
-    50%{
-        opacity:.15;
-        transform:scale(.2);
-    }
+50%{
+opacity:.15;
+transform:scale(.2);
+}
 }
 
-/* =========================
-   BOOM PARTICLES
-========================= */
+/* BOOM PARTICLES */
 
 #boom{
-    position:fixed;
-
-    inset:0;
-
-    pointer-events:none;
-
-    z-index:999;
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:999;
 }
 
 .particle{
-    position:absolute;
-
-    font-size:21px;
-
-    animation:boom 1.2s ease-out forwards;
+position:absolute;
+font-size:21px;
+animation:boom 1.2s ease-out forwards;
 }
 
 @keyframes boom{
-    0%{
-        transform:
-        translate(-50%,-50%)
-        scale(.2);
-
-        opacity:1;
-    }
-
-    100%{
-        transform:
-        translate(var(--x),var(--y))
-        rotate(var(--r))
-        scale(1.2);
-
-        opacity:0;
-    }
+0%{
+transform:
+translate(-50%,-50%)
+scale(.2);
+opacity:1;
+}
+100%{
+transform:
+translate(var(--x),var(--y))
+rotate(var(--r))
+scale(1.2);
+opacity:0;
+}
 }
 
-/* =========================
-   CONFETTI
-========================= */
+/* CONFETTI */
 
 .confetti{
-    position:fixed;
-
-    top:-30px;
-
-    width:7px;
-    height:13px;
-
-    border-radius:2px;
-
-    pointer-events:none;
-
-    animation:confettiFall linear forwards;
+position:fixed;
+top:-30px;
+width:7px;
+height:13px;
+border-radius:2px;
+pointer-events:none;
+animation:confettiFall linear forwards;
 }
 
 @keyframes confettiFall{
-    to{
-        transform:
-        translateY(115vh)
-        rotate(720deg);
-    }
+to{
+transform:
+translateY(115vh)
+rotate(720deg);
+}
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
+/* SMALL MOBILE FIX */
 
 @media(max-height:680px){
 
-    .page{
-        align-items:flex-start;
+.page{
+padding-top:max(70px,calc(env(safe-area-inset-top) + 18px));
+padding-bottom:max(125px,calc(env(safe-area-inset-bottom) + 90px));
+}
 
-        padding-top:55px;
-    }
+.glass{
+padding:18px 14px;
+}
 
-    .glass{
-        padding:18px 14px;
-    }
+.hero-icons{
+margin:10px 0;
+}
 
-    .hero-icons{
-        margin:10px 0;
-    }
+.surprise-row{
+margin:12px auto;
+}
 
-    .surprise-row{
-        margin:12px auto;
-    }
+.tupu{
+font-size:58px;
+}
 
-    .tupu{
-        font-size:58px;
-    }
-
-    .cake{
-        font-size:58px;
-    }
+.cake{
+font-size:58px;
+}
 }
 
 @media(min-width:700px){
 
-    .gallery{
-        grid-template-columns:
-        repeat(3,1fr);
-    }
+.gallery{
+grid-template-columns:
+repeat(3,1fr);
+}
 
-    .wishes{
-        grid-template-columns:
-        repeat(3,1fr);
-    }
+.wishes{
+grid-template-columns:
+repeat(3,1fr);
+}
 
-    .date{
-        font-size:15px;
-    }
+.date{
+font-size:15px;
+}
 }
 
 </style>
@@ -912,528 +716,463 @@ body{
 <div id="boom"></div>
 
 <button class="music" onclick="toggleMusic()">
-    ♫
+♫
 </button>
 
 <audio id="music" loop>
-    <source src="music.mp3" type="audio/mpeg">
+<source src="music.mp3" type="audio/mpeg">
 </audio>
 
-
-<!-- ==================================
-     PAGE 1
-================================== -->
+<!-- PAGE 1 -->
 
 <section class="page page1 active">
 
 <div class="glass">
 
-    <div class="tupu-badge">
-        💖 Made specially for my Tupu
-    </div>
+<div class="tupu-badge">
+💖 Made specially for my Tupu
+</div>
 
-    <div class="small-title">
-        A little surprise made with love
-    </div>
+<div class="small-title">
+A little surprise made with love
+</div>
 
-    <div class="hero-icons">
-        🎀 ✨ 🎂 ✨ 🎀
-    </div>
+<div class="hero-icons">
+🎀 ✨ 🎂 ✨ 🎀
+</div>
 
-    <h1 class="birthday-title">
-        HAPPY BIRTHDAY
-    </h1>
+<h1 class="birthday-title">
+HAPPY BIRTHDAY
+</h1>
 
-    <div class="tupu">
-        Tupu ❤️
-    </div>
+<div class="tupu">
+Tupu ❤️
+</div>
 
-    <p class="subtitle">
-        Today is not just another day...
-        because today is the birthday of someone
-        who is incredibly special to me. 💕
-    </p>
+<p class="subtitle">
+Today is not just another day...
+because today is the birthday of someone
+who is incredibly special to me. 💕
+</p>
 
-    <div class="surprise-row">
+<div class="surprise-row">
 
-        <div class="surprise"
-             onclick="loveBoom(this)">
-            <div>
-                <span>🎁</span>
-                <small>GIFT</small>
-            </div>
-        </div>
+<div class="surprise" onclick="loveBoom(this)">
+<div>
+<span>🎁</span>
+<small>GIFT</small>
+</div>
+</div>
 
-        <div class="surprise"
-             onclick="loveBoom(this)">
-            <div>
-                <span>🎂</span>
-                <small>CAKE</small>
-            </div>
-        </div>
+<div class="surprise" onclick="loveBoom(this)">
+<div>
+<span>🎂</span>
+<small>CAKE</small>
+</div>
+</div>
 
-        <div class="surprise"
-             onclick="loveBoom(this)">
-            <div>
-                <span>💝</span>
-                <small>LOVE</small>
-            </div>
-        </div>
+<div class="surprise" onclick="loveBoom(this)">
+<div>
+<span>💝</span>
+<small>LOVE</small>
+</div>
+</div>
 
-        <div class="surprise"
-             onclick="loveBoom(this)">
-            <div>
-                <span>✨</span>
-                <small>MAGIC</small>
-            </div>
-        </div>
+<div class="surprise" onclick="loveBoom(this)">
+<div>
+<span>✨</span>
+<small>MAGIC</small>
+</div>
+</div>
 
-    </div>
+</div>
 
-    <div class="love-note">
+<div class="love-note">
 
-        <h3>
-            My Tupu 💗
-        </h3>
+<h3>
+My Tupu 💗
+</h3>
 
-        <p class="subtitle"
-           style="margin:0;font-size:13px">
+<p class="subtitle" style="margin:0;font-size:13px">
 
-            I made this little birthday surprise
-            just for you.
+I made this little birthday surprise
+just for you.
 
-            Tap the gifts above and
-            see a little bit of birthday magic! ✨
+Tap the gifts above and
+see a little bit of birthday magic! ✨
 
-        </p>
+</p>
 
-    </div>
+</div>
 
 </div>
 
 </section>
 
-
-<!-- ==================================
-     PAGE 2
-================================== -->
+<!-- PAGE 2 -->
 
 <section class="page page2">
 
 <div class="glass">
 
-    <div class="small-title">
-        A date worth remembering forever
-    </div>
+<div class="small-title">
+A date worth remembering forever
+</div>
 
-    <div class="tupu"
-         style="font-size:55px">
+<div class="tupu" style="font-size:55px">
+Tupu's Day 💕
+</div>
 
-        Tupu's Day 💕
+<h2>
+November 2026 📅
+</h2>
 
-    </div>
+<div class="calendar">
 
-    <h2>
-        November 2026 📅
-    </h2>
+<div class="day">SUN</div>
+<div class="day">MON</div>
+<div class="day">TUE</div>
+<div class="day">WED</div>
+<div class="day">THU</div>
+<div class="day">FRI</div>
+<div class="day">SAT</div>
 
-    <div class="calendar">
+<div class="date">1</div>
+<div class="date">2</div>
+<div class="date">3</div>
+<div class="date">4</div>
+<div class="date">5</div>
+<div class="date">6</div>
+<div class="date">7</div>
 
-        <div class="day">SUN</div>
-        <div class="day">MON</div>
-        <div class="day">TUE</div>
-        <div class="day">WED</div>
-        <div class="day">THU</div>
-        <div class="day">FRI</div>
-        <div class="day">SAT</div>
+<div class="date">8</div>
+<div class="date">9</div>
+<div class="date">10</div>
+<div class="date">11</div>
+<div class="date">12</div>
+<div class="date">13</div>
+<div class="date">14</div>
 
-        <div class="date">1</div>
-        <div class="date">2</div>
-        <div class="date">3</div>
-        <div class="date">4</div>
-        <div class="date">5</div>
-        <div class="date">6</div>
-        <div class="date">7</div>
+<div class="date">15</div>
+<div class="date">16</div>
+<div class="date">17</div>
+<div class="date">18</div>
+<div class="date">19</div>
+<div class="date">20</div>
+<div class="date">21</div>
 
-        <div class="date">8</div>
-        <div class="date">9</div>
-        <div class="date">10</div>
-        <div class="date">11</div>
-        <div class="date">12</div>
-        <div class="date">13</div>
-        <div class="date">14</div>
+<div class="date">22</div>
+<div class="date">23</div>
 
-        <div class="date">15</div>
-        <div class="date">16</div>
-        <div class="date">17</div>
-        <div class="date">18</div>
-        <div class="date">19</div>
-        <div class="date">20</div>
-        <div class="date">21</div>
+<div class="date special-date">
+24
+</div>
 
-        <div class="date">22</div>
-        <div class="date">23</div>
+<div class="date">25</div>
+<div class="date">26</div>
+<div class="date">27</div>
+<div class="date">28</div>
 
-        <div class="date special-date">
-            24
-        </div>
+<div class="date">29</div>
+<div class="date">30</div>
 
-        <div class="date">25</div>
-        <div class="date">26</div>
-        <div class="date">27</div>
-        <div class="date">28</div>
+</div>
 
-        <div class="date">29</div>
-        <div class="date">30</div>
+<p class="subtitle">
 
-    </div>
+⭐ 24 November ⭐
+<br>
 
-    <p class="subtitle">
+A very special date because
+this beautiful world got
 
-        ⭐ 24 November ⭐
-        <br>
+<strong>
+my Tupu. ❤️
+</strong>
 
-        A very special date because
-        this beautiful world got
-
-        <strong>
-            my Tupu. ❤️
-        </strong>
-
-    </p>
+</p>
 
 </div>
 
 </section>
 
-
-<!-- ==================================
-     PAGE 3
-================================== -->
+<!-- PAGE 3 -->
 
 <section class="page page3">
 
 <div class="glass">
 
-    <div class="small-title">
-        Little pieces of happiness
-    </div>
+<div class="small-title">
+Little pieces of happiness
+</div>
 
-    <div class="tupu"
-         style="font-size:55px">
+<div class="tupu" style="font-size:55px">
+Our Memories
+</div>
 
-        Our Memories
+<div class="gallery">
 
-    </div>
+<div class="photo">
+<img src="images/pic1.jpg">
+<span>mine ❤️</span>
+</div>
 
-    <div class="gallery">
+<div class="photo">
+<img src="images/pic2.jpg">
+<span>Special Moment ✨</span>
+</div>
 
-        <div class="photo">
-            <img src="images/pic1.jpg">
-            <span>mine ❤️</span>
-        </div>
+<div class="photo">
+<img src="images/pic3.jpg">
+<span>My Favourite 🌷</span>
+</div>
 
-        <div class="photo">
-            <img src="images/pic2.jpg">
-            <span>Special Moment ✨</span>
-        </div>
+<div class="photo">
+<img src="images/pic4.png">
+<span>only mine 💕</span>
+</div>
 
-        <div class="photo">
-            <img src="images/pic3.jpg">
-            <span>My Favourite 🌷</span>
-        </div>
+<div class="photo">
+<img src="images/pic5.jpg">
+<span>Forever Special 🫶</span>
+</div>
 
-        <div class="photo">
-            <img src="images/pic4.png">
-            <span>only mine 💕</span>
-        </div>
+<div class="photo">
+<img src="images/pic6.png">
+<span>My Tupu ❤️</span>
+</div>
 
-        <div class="photo">
-            <img src="images/pic5.jpg">
-            <span>Forever Special 🫶</span>
-        </div>
+</div>
 
-        <div class="photo">
-            <img src="images/pic6.png">
-            <span>My Tupu ❤️</span>
-        </div>
+<p class="subtitle">
 
-    </div>
+Every photo holds a little story.
+Every story holds a beautiful memory.
+And some memories are simply
+too special to ever forget. 💖
 
-    <p class="subtitle">
-
-        Every photo holds a little story.
-        Every story holds a beautiful memory.
-        And some memories are simply
-        too special to ever forget. 💖
-
-    </p>
+</p>
 
 </div>
 
 </section>
 
-
-<!-- ==================================
-     PAGE 4
-================================== -->
+<!-- PAGE 4 -->
 
 <section class="page page4">
 
 <div class="glass">
 
-    <div class="small-title">
-        Something from my heart
-    </div>
+<div class="small-title">
+Something from my heart
+</div>
 
-    <div class="tupu"
-         style="font-size:60px">
+<div class="tupu" style="font-size:60px">
+For My Tupu ❤️
+</div>
 
-        For My Tupu ❤️
+<p class="message">
 
-    </div>
+Tupu, some people enter our life
+and slowly become one of the most
+beautiful parts of it.
 
-    <p class="message">
+<br><br>
 
-        Tupu, some people enter our life
-        and slowly become one of the most
-        beautiful parts of it.
+You are one of those very special
+people to me.
 
-        <br><br>
+Your smile can make an ordinary
+moment feel beautiful, and having
+you in my life makes so many little
+moments feel special.
 
-        You are one of those very special
-        people to me.
+<br><br>
 
-        Your smile can make an ordinary
-        moment feel beautiful, and having
-        you in my life makes so many little
-        moments feel special.
+On your birthday, I wish that
+your life is always filled with
+happiness, beautiful memories,
+success, laughter and countless
+reasons to smile.
 
-        <br><br>
+<br><br>
 
-        On your birthday, I wish that
-        your life is always filled with
-        happiness, beautiful memories,
-        success, laughter and countless
-        reasons to smile.
+May all the dreams hidden inside
+your heart slowly become reality.
 
-        <br><br>
+May every new day bring something
+beautiful into your life.
 
-        May all the dreams hidden inside
-        your heart slowly become reality.
+<br><br>
 
-        May every new day bring something
-        beautiful into your life.
+And most importantly...
 
-        <br><br>
+<strong>
+never stop smiling, Tupu. ❤️
+</strong>
 
-        And most importantly...
+</p>
 
-        <strong>
-            never stop smiling, Tupu. ❤️
-        </strong>
+<div class="wishes">
 
-    </p>
+<div class="wish">
+<b>🌸</b>
+<h3>Happiness</h3>
+<p>
+May your smile always
+stay this beautiful.
+</p>
+</div>
 
-    <div class="wishes">
+<div class="wish">
+<b>✨</b>
+<h3>Dreams</h3>
+<p>
+May every beautiful dream
+find its way to you.
+</p>
+</div>
 
-        <div class="wish">
+<div class="wish">
+<b>💖</b>
+<h3>Love</h3>
+<p>
+May your life always
+be surrounded by love.
+</p>
+</div>
 
-            <b>🌸</b>
-
-            <h3>
-                Happiness
-            </h3>
-
-            <p>
-                May your smile always
-                stay this beautiful.
-            </p>
-
-        </div>
-
-        <div class="wish">
-
-            <b>✨</b>
-
-            <h3>
-                Dreams
-            </h3>
-
-            <p>
-                May every beautiful dream
-                find its way to you.
-            </p>
-
-        </div>
-
-        <div class="wish">
-
-            <b>💖</b>
-
-            <h3>
-                Love
-            </h3>
-
-            <p>
-                May your life always
-                be surrounded by love.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 </div>
 
 </section>
 
-
-<!-- ==================================
-     PAGE 5
-================================== -->
+<!-- PAGE 5 -->
 
 <section class="page page5">
 
 <div class="glass">
 
-    <div class="small-title">
-        One last birthday surprise
-    </div>
+<div class="small-title">
+One last birthday surprise
+</div>
 
-    <div class="cake-stage"
-         onclick="cakeSurprise(this)">
+<div class="cake-stage" onclick="cakeSurprise(this)">
 
-        <div class="flame">
-            🔥
-        </div>
+<div class="flame">
+🔥
+</div>
 
-        <div class="cake">
-            🎂
-        </div>
+<div class="cake">
+🎂
+</div>
 
-        <strong>
-            Make a wish, Tupu! ✨
-        </strong>
+<strong>
+Make a wish, Tupu! ✨
+</strong>
 
-        <p style="
-        font-size:10px;
-        opacity:.7;
-        margin-top:7px">
+<p style="
+font-size:10px;
+opacity:.7;
+margin-top:7px">
 
-            Tap the cake 💖
+Tap the cake 💖
 
-        </p>
+</p>
 
-    </div>
+</div>
 
-    <h2 class="final-title">
+<h2 class="final-title">
 
-        Happy Birthday
-        <br>
-        Tupu ❤️
+Happy Birthday
+<br>
+Tupu ❤️
 
-    </h2>
+</h2>
 
-    <div class="big-heart">
-        💗
-    </div>
+<div class="big-heart">
+💗
+</div>
 
-    <p class="subtitle">
+<p class="subtitle">
 
-        I hope this little surprise
-        puts a beautiful smile on your face.
+I hope this little surprise
+puts a beautiful smile on your face.
 
-        <br><br>
+<br><br>
 
-        You deserve happiness,
-        beautiful memories,
-        sweet surprises and
-        countless reasons to smile.
+You deserve happiness,
+beautiful memories,
+sweet surprises and
+countless reasons to smile.
 
-        <br><br>
+<br><br>
 
-        Stay happy.
-        Stay amazing.
-        And always keep smiling,
+Stay happy.
+Stay amazing.
+And always keep smiling,
 
-        <strong>
-            my Tupu. ❤️
-        </strong>
+<strong>
+my Tupu. ❤️
+</strong>
 
-    </p>
+</p>
 
-    <div class="hero-icons">
+<div class="hero-icons">
+🎁 💖 ✨ 🎂 ✨ 💖 🎁
+</div>
 
-        🎁 💖 ✨ 🎂 ✨ 💖 🎁
+<div class="love-note">
 
-    </div>
+<h3>
+Just for Tupu 💕
+</h3>
 
-    <div class="love-note">
+<p style="
+font-size:12px;
+line-height:1.8">
 
-        <h3>
-            Just for Tupu 💕
-        </h3>
+This little website was made
+with lots of love,
+especially for you.
 
-        <p style="
-        font-size:12px;
-        line-height:1.8">
+Happy Birthday once again,
+Tupu! 🎂❤️
 
-            This little website was made
-            with lots of love,
-            especially for you.
+</p>
 
-            Happy Birthday once again,
-            Tupu! 🎂❤️
-
-        </p>
-
-    </div>
+</div>
 
 </div>
 
 </section>
 
-
-<!-- ==================================
-     NAVIGATION
-================================== -->
+<!-- NAVIGATION -->
 
 <div class="nav">
 
-    <button class="btn"
-            onclick="prevPage()">
+<button class="btn" onclick="prevPage()">
+← Back
+</button>
 
-        ← Back
+<div class="dots">
+<div class="dot active"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+</div>
 
-    </button>
-
-    <div class="dots">
-
-        <div class="dot active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-
-    </div>
-
-    <button class="btn"
-            id="nextBtn"
-            onclick="nextPage()">
-
-        Next →
-
-    </button>
+<button class="btn" id="nextBtn" onclick="nextPage()">
+Next →
+</button>
 
 </div>
 
-
 <script>
 
-/* =========================
-   PAGE SYSTEM
-========================= */
+/* PAGE SYSTEM */
 
 let currentPage = 0;
 
@@ -1446,459 +1185,370 @@ document.querySelectorAll(".dot");
 const nextBtn =
 document.getElementById("nextBtn");
 
-
 function showPage(index){
 
-    pages[currentPage]
-    .classList.remove("active");
+pages[currentPage]
+.classList.remove("active");
 
-    currentPage = index;
+currentPage = index;
 
-    if(currentPage < 0){
-        currentPage =
-        pages.length - 1;
-    }
+if(currentPage < 0){
+currentPage =
+pages.length - 1;
+}
 
-    if(currentPage >= pages.length){
-        currentPage = 0;
-    }
+if(currentPage >= pages.length){
+currentPage = 0;
+}
 
-    pages[currentPage]
-    .classList.add("active");
+pages[currentPage]
+.classList.add("active");
 
+dots.forEach((dot,i)=>{
 
-    dots.forEach((dot,i)=>{
+dot.classList.toggle(
+"active",
+i === currentPage
+);
 
-        dot.classList.toggle(
-            "active",
-            i === currentPage
-        );
+});
 
-    });
+if(currentPage === pages.length-1){
 
+nextBtn.innerHTML =
+"Restart ↻";
 
-    if(currentPage === pages.length-1){
+createConfetti();
 
-        nextBtn.innerHTML =
-        "Restart ↻";
+}else{
 
-        createConfetti();
-
-    }else{
-
-        nextBtn.innerHTML =
-        "Next →";
-
-    }
+nextBtn.innerHTML =
+"Next →";
 
 }
 
+}
 
 function nextPage(){
-
-    showPage(currentPage + 1);
-
+showPage(currentPage + 1);
 }
-
 
 function prevPage(){
-
-    showPage(currentPage - 1);
-
+showPage(currentPage - 1);
 }
 
-
-/* =========================
-   MUSIC
-========================= */
+/* MUSIC */
 
 function toggleMusic(){
 
-    const music =
-    document.getElementById("music");
+const music =
+document.getElementById("music");
 
-    if(music.paused){
+if(music.paused){
 
-        music.play()
-        .catch(()=>{});
+music.play()
+.catch(()=>{});
 
-    }else{
+}else{
 
-        music.pause();
-
-    }
+music.pause();
 
 }
 
+}
 
-/* =========================
-   LOVE BOOM
-========================= */
+/* LOVE BOOM */
 
 function loveBoom(element){
 
-    const layer =
-    document.getElementById("boom");
+const layer =
+document.getElementById("boom");
 
-    const rect =
-    element.getBoundingClientRect();
+const rect =
+element.getBoundingClientRect();
 
-    const centerX =
-    rect.left + rect.width/2;
+const centerX =
+rect.left + rect.width/2;
 
-    const centerY =
-    rect.top + rect.height/2;
+const centerY =
+rect.top + rect.height/2;
 
+const icons = [
+"💖",
+"💕",
+"💗",
+"✨",
+"🌸",
+"🎉",
+"🎊",
+"🎁"
+];
 
-    const icons = [
+for(let i=0;i<25;i++){
 
-        "💖",
-        "💕",
-        "💗",
-        "✨",
-        "🌸",
-        "🎉",
-        "🎊",
-        "🎁"
+const particle =
+document.createElement("span");
 
-    ];
+particle.className =
+"particle";
 
+particle.innerHTML =
+icons[
+Math.floor(
+Math.random()*icons.length
+)
+];
 
-    for(let i=0;i<25;i++){
+particle.style.left =
+centerX+"px";
 
-        const particle =
-        document.createElement("span");
+particle.style.top =
+centerY+"px";
 
-        particle.className =
-        "particle";
+const angle =
+Math.random()*
+Math.PI*2;
 
-        particle.innerHTML =
-        icons[
-        Math.floor(
-        Math.random()*icons.length
-        )
-        ];
+const distance =
+70+
+Math.random()*170;
 
+particle.style
+.setProperty(
+"--x",
+Math.cos(angle)*
+distance+"px"
+);
 
-        particle.style.left =
-        centerX+"px";
+particle.style
+.setProperty(
+"--y",
+Math.sin(angle)*
+distance+"px"
+);
 
-        particle.style.top =
-        centerY+"px";
+particle.style
+.setProperty(
+"--r",
+(
+Math.random()*720-360
+)+"deg"
+);
 
+layer.appendChild(
+particle
+);
 
-        const angle =
-        Math.random()*
-        Math.PI*2;
-
-        const distance =
-        70+
-        Math.random()*170;
-
-
-        particle.style
-        .setProperty(
-        "--x",
-        Math.cos(angle)*
-        distance+"px"
-        );
-
-
-        particle.style
-        .setProperty(
-        "--y",
-        Math.sin(angle)*
-        distance+"px"
-        );
-
-
-        particle.style
-        .setProperty(
-        "--r",
-        (
-        Math.random()*720-360
-        )+"deg"
-        );
-
-
-        layer.appendChild(
-            particle
-        );
-
-
-        setTimeout(()=>{
-
-            particle.remove();
-
-        },1300);
-
-    }
-
-
-    if(navigator.vibrate){
-
-        navigator.vibrate(30);
-
-    }
+setTimeout(()=>{
+particle.remove();
+},1300);
 
 }
 
+if(navigator.vibrate){
+navigator.vibrate(30);
+}
 
-/* =========================
-   CAKE SURPRISE
-========================= */
+}
+
+/* CAKE SURPRISE */
 
 function cakeSurprise(element){
 
-    loveBoom(element);
+loveBoom(element);
 
-    createConfetti();
+createConfetti();
 
-    setTimeout(()=>{
+setTimeout(()=>{
 
-        alert(
-        "🎂 Happy Birthday Tupu! ❤️\n\nMake a beautiful wish! ✨"
-        );
+alert(
+"🎂 Happy Birthday Tupu! ❤️\n\nMake a beautiful wish! ✨"
+);
 
-    },500);
+},500);
 
 }
 
-
-/* =========================
-   FLOATING HEARTS
-========================= */
+/* FLOATING HEARTS */
 
 function createHeart(){
 
-    const heart =
-    document.createElement("div");
+const heart =
+document.createElement("div");
 
-    heart.className =
-    "floating-heart";
+heart.className =
+"floating-heart";
 
+const hearts = [
+"❤️",
+"💗",
+"💕",
+"💖"
+];
 
-    const hearts = [
+heart.innerHTML =
+hearts[
+Math.floor(
+Math.random()*hearts.length
+)
+];
 
-        "❤️",
-        "💗",
-        "💕",
-        "💖"
+heart.style.left =
+Math.random()*100+"vw";
 
-    ];
+heart.style.fontSize =
+(
+12+
+Math.random()*18
+)+"px";
 
+heart.style.animationDuration =
+(
+6+
+Math.random()*5
+)+"s";
 
-    heart.innerHTML =
-    hearts[
-    Math.floor(
-    Math.random()*hearts.length
-    )
-    ];
+document.body
+.appendChild(heart);
 
-
-    heart.style.left =
-    Math.random()*100+"vw";
-
-
-    heart.style.fontSize =
-    (
-    12+
-    Math.random()*18
-    )+"px";
-
-
-    heart.style.animationDuration =
-    (
-    6+
-    Math.random()*5
-    )+"s";
-
-
-    document.body
-    .appendChild(heart);
-
-
-    setTimeout(()=>{
-
-        heart.remove();
-
-    },11000);
+setTimeout(()=>{
+heart.remove();
+},11000);
 
 }
 
-
 setInterval(
-    createHeart,
-    900
+createHeart,
+900
 );
 
-
-/* =========================
-   SPARKLES
-========================= */
+/* SPARKLES */
 
 for(let i=0;i<20;i++){
 
-    const spark =
-    document.createElement("div");
+const spark =
+document.createElement("div");
 
-    spark.className =
-    "spark";
+spark.className =
+"spark";
 
-    spark.style.left =
-    Math.random()*100+"vw";
+spark.style.left =
+Math.random()*100+"vw";
 
-    spark.style.top =
-    Math.random()*100+"vh";
+spark.style.top =
+Math.random()*100+"vh";
 
-    spark.style.animationDelay =
-    Math.random()*2+"s";
+spark.style.animationDelay =
+Math.random()*2+"s";
 
-    document.body
-    .appendChild(spark);
+document.body
+.appendChild(spark);
 
 }
 
-
-/* =========================
-   CONFETTI
-========================= */
+/* CONFETTI */
 
 function createConfetti(){
 
-    const colors = [
+const colors = [
+"#ffd166",
+"#ff70a6",
+"#ffffff",
+"#a98cff",
+"#ff9770"
+];
 
-        "#ffd166",
-        "#ff70a6",
-        "#ffffff",
-        "#a98cff",
-        "#ff9770"
+for(let i=0;i<55;i++){
 
-    ];
+const confetti =
+document.createElement("div");
 
+confetti.className =
+"confetti";
 
-    for(let i=0;i<55;i++){
+confetti.style.left =
+Math.random()*100+"vw";
 
-        const confetti =
-        document.createElement("div");
+confetti.style.background =
+colors[
+Math.floor(
+Math.random()*colors.length
+)
+];
 
-        confetti.className =
-        "confetti";
+confetti.style.animationDuration =
+(
+2.5+
+Math.random()*3
+)+"s";
 
+confetti.style.animationDelay =
+Math.random()*.7+"s";
 
-        confetti.style.left =
-        Math.random()*100+"vw";
+document.body
+.appendChild(confetti);
 
-
-        confetti.style.background =
-        colors[
-        Math.floor(
-        Math.random()*colors.length
-        )
-        ];
-
-
-        confetti.style.animationDuration =
-        (
-        2.5+
-        Math.random()*3
-        )+"s";
-
-
-        confetti.style.animationDelay =
-        Math.random()*.7+"s";
-
-
-        document.body
-        .appendChild(confetti);
-
-
-        setTimeout(()=>{
-
-            confetti.remove();
-
-        },6500);
-
-    }
+setTimeout(()=>{
+confetti.remove();
+},6500);
 
 }
 
+}
 
-/* =========================
-   SWIPE FOR MOBILE
-========================= */
+/* SWIPE FOR MOBILE */
 
 let touchStartX = 0;
-
 let touchEndX = 0;
-
 
 document.addEventListener(
 "touchstart",
 function(event){
 
-    touchStartX =
-    event.changedTouches[0]
-    .screenX;
+touchStartX =
+event.changedTouches[0]
+.screenX;
 
 },
 {passive:true}
 );
-
 
 document.addEventListener(
 "touchend",
 function(event){
 
-    touchEndX =
-    event.changedTouches[0]
-    .screenX;
+touchEndX =
+event.changedTouches[0]
+.screenX;
 
+let difference =
+touchStartX-touchEndX;
 
-    let difference =
-    touchStartX-touchEndX;
+if(difference > 80){
+nextPage();
+}
 
-
-    if(difference > 80){
-
-        nextPage();
-
-    }
-
-
-    if(difference < -80){
-
-        prevPage();
-
-    }
+if(difference < -80){
+prevPage();
+}
 
 },
 {passive:true}
 );
 
-
-/* =========================
-   KEYBOARD
-========================= */
+/* KEYBOARD */
 
 document.addEventListener(
 "keydown",
 function(event){
 
-    if(event.key ===
-    "ArrowRight"){
+if(event.key === "ArrowRight"){
+nextPage();
+}
 
-        nextPage();
-
-    }
-
-
-    if(event.key ===
-    "ArrowLeft"){
-
-        prevPage();
-
-    }
+if(event.key === "ArrowLeft"){
+prevPage();
+}
 
 });
 
